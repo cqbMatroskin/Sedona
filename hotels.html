@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotels</title>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.min.css">	
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="inner-page">
+	<div class="wrap">
+		<header class="main-header">
+			<nav class="top-menu clearfix">
+				<ul class="main-header_left">
+					<li class="main-header_li"><a href="#">Информация</a></li>
+					<li class="main-header_li"><a href="#">Фото и видео</a></li>
+				</ul>
+				<ul class="main-header_right">
+					<li class="main-header_li"><a href="#">Карта штата</a></li>
+					<li class="main-header_li linked"><a href="hotels.html">Гостиницы</a></li>
+				</ul>
+			</nav>
+			<div class="logo"><a href="index.html"><img src="img/logo.png" height="70" width="138" alt="Logo"></a></div>
+			<div class="header-filter clearfix">
+				<form action="/echo" method="post">
+					<div class="infrastructure">
+						<div class="filter-title">Инфраструктура:</div>
+						<input class="form__checkbox-input" type="checkbox" id="pool" name="infrastructure[]" value="pool" checked>
+						<label class="form__checkbox" for="pool">Бассейн</label>
+						<input class="form__checkbox-input" type="checkbox" id="parking" name="infrastructure[]" value="parking">
+						<label class="form__checkbox" for="parking">Парковка</label>
+						<input class="form__checkbox-input" type="checkbox" id="wifi" name="infrastructure[]" value="wifi">
+						<label class="form__checkbox" for="wifi">Wi-Fi</label>
+					</div>
+					<div class="hotels">
+						<div class="filter-title">Тип жилья:</div>
+						<input class="form__checkbox-input" type="checkbox" id="hotel" name="housing[]" value="hotel" checked>
+						<label class="form__checkbox" for="hotel">Гостиница</label>
+						<input class="form__checkbox-input" type="checkbox" id="motel" name="housing[]" value="motel" checked>
+						<label class="form__checkbox" for="motel">Мотель</label>
+						<input class="form__checkbox-input" type="checkbox" id="apartments" name="housing[]" value="apartments" checked>
+						<label class="form__checkbox" for="apartments">Апартаменты</label>
+					</div>
+
+					<div class="range-filter">
+						<div class="filter-title">Стоимость в сутки(р):</div>
+						<div class="price-controls">
+							<label class="min-price"><input name="min-price" type="text" value="от 0"></label>
+							<label class="max-price"><input name="max-price" type="text" value="до 3000"></label>
+						</div>
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="toogle toogle-min"></div>
+							<div class="toogle toogle-max"></div>
+						</div>
+						<button type="submit" class="btn-result">Показать</button>
+					</div>
+				</form>
+			</div>
+		</header>
+		<div class="sorting-row mid">
+			<span class="sorting-row__title-found">Найдено: 3</span>
+			<div class="sorting-item">				
+				<ul>
+					<li class="title-sorting">Сортировка:</li>
+					<li class="active"><a href="#">По цене</a></li>
+					<li><a href="#">По типу</a></li>
+					<li><a href="#">По рейтингу</a></li>
+				</ul>
+			</div>
+			<div class="sorting-arrow">				
+				<a href="#" class="icon-up-dir"></a>
+				<a href="#" class="icon-down-dir active"></a>				
+			</div>
+		</div>
+		<main>
+			<article class="filter-result clearfix">
+				<div class="preview">
+					<img src="img/amara.jpg" height="94" width="140" alt="amara">
+				</div>
+				<div class="result-block">
+					<h1>Amara resort & Spa</h1>
+					<p class="housing">Гостиница 
+						<a href="#" class="filter-result__btn">Подробнее</a>
+					</p>
+					<p class="housing">от 3500 &#8381;
+						<a href="#" class="filter-result__btn btn-book">Забронировать</a>
+					</p>
+				</div>
+				<div class="rating">
+					<div class="stars">
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+					</div>
+					<div class="point">Рейтинг: 8,5</div>
+				</div>
+			</article>
+			<article class="filter-result clearfix">
+				<div class="preview">
+					<img src="img/desert.jpg" height="94" width="140" alt="desert">
+				</div>
+				<div class="result-block">
+					<h1>Desert Quail Inn</h1>
+					<p class="housing">Мотель					
+						<a href="#" class="filter-result__btn">Подробнее</a>
+					</p>
+					<p class="housing">от 2200 &#8381;
+						<a href="#" class="filter-result__btn btn-book">Забронировать</a>
+					</p>
+				</div>
+				<div class="rating">
+					<div class="stars">
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+					</div>
+					<div class="point">Рейтинг: 8,9</div>
+				</div>
+			</article>
+			<article class="filter-result clearfix">
+				<div class="preview">
+					<img src="img/villas.jpg" height="94" width="140" alt="villas">
+				</div>
+				<div class="result-block">
+					<h1>Villas At Poco Diablo</h1>
+					<p class="housing">Апартаменты										
+						<a href="#" class="filter-result__btn">Подробнее</a>
+					</p>
+					<p class="housing">от 4000 &#8381;
+						<a href="#" class="filter-result__btn btn-book">Забронировать</a>
+					</p>
+				</div>
+				<div class="rating">
+					<div class="stars">
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+						<i class="icon-star"></i>
+					</div>
+					<div class="point">Рейтинг: 9,2</div>
+				</div>
+			</article>
+
+		</main>
+		<footer class="main-footer clearfix">			
+			<span class="visit col-1">#visitsedona</span>
+			<section class="social col-1">
+				<a href="#" class="social-btn icon-twitter"></a>  <!--Иконочный шрифт-->
+				<a href="#" class="social-btn icon-facebook"></a>
+				<a href="#" class="social-btn icon-youtube"></a>
+			</section>
+			<section class="footer-copyright col-1">
+				<p>Website by <a class="btn" href="https://htmlacademy.ru" target="_blank"></a></p>
+			</section>			
+		</footer>
+	</div>
+</body>
+</html>
